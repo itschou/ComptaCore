@@ -14,20 +14,23 @@
 <body>
 
     <div class="container text-center">
-        <form action="{{ route('products.store') }}" method="POST">
+        <form action="{{ route('devis') }}" method="POST">
             @csrf
             <h1 class=" text-uppercase">Demander un devis</h1><br>
-            <label for="quantity">Quantité</label>
-            <select name="product">
-                @foreach($products as $product)
-                <option value="{{ $product->category }}">{{ $product->name }}</option>
+            <label for="quantity">Products</label>
+            <select name="category">
+                @foreach($categories as $category)
+                <option value="{{ $category->category }}">{{ $category->category }}</option>
                 @endforeach
             </select><br><br>
-            <label for="quantity">Quantité</label>
-            <input type="text" id="quantity" name="quantity"><br><br>
-            <button type="submit">Ajouter un devis</button>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity"><br><br>
+            <button type="submit" class="button">Add devis</button>
+        </form><br>
+        <form action="{{ route('sendJobs') }}" method="POST">
+            @csrf
+            <button type="submit">Send Devis</button>
         </form>
-        <button type="submit">Envoyer les devis</button>
     </div>
 
 </body>

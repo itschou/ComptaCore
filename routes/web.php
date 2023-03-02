@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DevisController;
+use App\Http\Controllers\ProductController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $categories = Category::all();
+    return view('welcome', ['categories' => $categories]);
+})->name('index');
+
+Route::get('/devis', [DevisController::class, 'addJob']);
+Route::post('/devis', [DevisController::class, 'addJob'])->name('devis');
 
 Route::resource('/products', ProductController::class);
+
+Route::post('/sendjob', [DevisController::class, 'sendJobs'])->name('sendJobs');

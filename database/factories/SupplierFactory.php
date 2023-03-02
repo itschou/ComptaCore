@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Suppliers>
  */
-class SuppliersFactory extends Factory
+class SupplierFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,11 +16,11 @@ class SuppliersFactory extends Factory
      */
     public function definition(): array
     {
-        $tableau = ['PC', 'Telephone', 'Ipad'];
+        $array = ['PC', 'Telephone', 'Ipad'];
         return [
             'name' => $this->faker->company(),
             'email' => $this->faker->safeEmail(),
-            'category' => $this->faker->randomElement($tableau)
+            'category' => $this->faker->randomElement($array)
         ];
     }
 }

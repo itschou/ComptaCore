@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Suppliers;
+use App\Models\Supplier;
 use App\Http\Requests\StoreSuppliersRequest;
 use App\Http\Requests\UpdateSuppliersRequest;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
 
-class SuppliersController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
         //
     }
@@ -21,7 +19,7 @@ class SuppliersController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): Response
+    public function create()
     {
         //
     }
@@ -29,7 +27,7 @@ class SuppliersController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSuppliersRequest $request): RedirectResponse
+    public function store(StoreSuppliersRequest $request)
     {
         //
     }
@@ -37,7 +35,7 @@ class SuppliersController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Suppliers $suppliers): Response
+    public function show(Supplier $suppliers)
     {
         //
     }
@@ -45,7 +43,7 @@ class SuppliersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Suppliers $suppliers): Response
+    public function edit(Supplier $suppliers)
     {
         //
     }
@@ -53,7 +51,7 @@ class SuppliersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSuppliersRequest $request, Suppliers $suppliers): RedirectResponse
+    public function update(UpdateSuppliersRequest $request, Supplier $suppliers)
     {
         //
     }
@@ -61,7 +59,7 @@ class SuppliersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Suppliers $suppliers): RedirectResponse
+    public function destroy(Supplier $suppliers)
     {
         //
     }
