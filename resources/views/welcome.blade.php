@@ -25,8 +25,9 @@
             </select><br><br>
             <label for="quantity">Quantité</label>
             <input type="text" id="quantity" name="quantity"><br><br>
-            <button type="submit">Demander un devis</button>
+            <button type="submit">Ajouter un devis</button>
         </form>
+        <button type="submit">Envoyer les devis</button>
     </div>
 
 </body>
